@@ -285,11 +285,10 @@ function draw_craters() {
         ctx.arc(x,  y, size, 0, Math.PI * 2, false);
         ctx.fill();
 
-        let test = 'delete'; // TODO: DELETE
     }
 }
 
-// clears the
+
 function clear_canvas() {
     ctx.clearRect(0,0, c.width, c.height);
 }
