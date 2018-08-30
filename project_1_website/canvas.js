@@ -350,6 +350,7 @@ function create_flag() {
         $("#art")
             .off('mousemove', point_at_box_on_planet)
             .off('click', start_flag);
+        c.style.cursor = 'default';
     }
 }
 
@@ -374,9 +375,7 @@ function point_at_box_on_planet(evt) {
 }
 
 function start_flag(evt) {
-    console.log("is here");
     if (is_on_top_box_on_planet(evt)) {
-        console.log("ishere");
         create_flag()
     }
 }
