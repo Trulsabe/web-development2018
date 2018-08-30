@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abstraction Destruction</title>
+    <link type="text/css" rel="stylesheet" href="art.css">
+    <script src="../libraries/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../space_ship.png"/>
+</head>
+
+<body>
+<header id="preInformation">
+    <div></div>
+    <div>
+        <h1>
+            Concrete Abstraction
+        </h1>
+        <p>
+            The artist is currently living in Trondheim, Norway,<br>
+            but plans not to stay on Earth for too long.<br>
+            This artwork is her attempt to get a free ticket to the red planet.
+        </p>
+        <p>
+            Lauren Ibsen.
+        </p>
+    </div>
+    <div></div>
+</header>
+
+<div id="art-section">
+    <div></div>
+    <div>
+        <canvas id="art"
+                width="700"
+                height="400">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+    <div></div>
+</div>
+
+
+<footer id="documentation">
+    <div id="doc-title-button">
+        <h2>Documentation</h2>
+        <button id="doc-button">Show</button>
+    </div>
+    <div id="doc-content">
+        <ul>
+            <li>
+                Gi en kort beskrivelser av CSS-grid og Flexbox-layout: hvilken utfordring er disse ment og løse, hva skiller disse to løsningene og forklar ditt valg.
+            </li>
+            <ul>
+                <li>
+                    Både Grid og Flexbox er ment for å organisere nettsiders layout. Begge gjør det enkelt å plassere elementer (f.eks. paragrafer, bilder, video osv.) i forhold til hverandre.
+                    Forskjellen på de to er at Flexbox er ment for én dimensjon, mens Grid er ment for to dimemsjoner. Hvis man kun skal tenke på elementer horisontalt, så er det 'bedre' å bruke Flexbox. Hvis man derimot har tenkt å ha et slags rutenett-design, gjør Grid det
+                    veldig enkelt å håndtere.
+                </li>
+            </ul>
+            <li>
+                Gi en kort beskrivelse av HTML canvas og bruk av SVG i HTML. Gjør rede for hvilken av disse som er best egnet til å løse utfordringen med å lage ditt bilde bestående av interaktive 2D-elementer som beskrevet i denne oppgaven.
+            </li>
+            <li>
+                Gi en kort beskrivelse av jQuery: hvilken funksjonalitet dette biblioteket tilbyr, og diskuter hva som er relevant for denne oppgaven.
+            </li>
+            <li>
+
+                Gi en kort beskrivelse av cross-browser testing, hvorfor dette må/bør gjøres, spesifiser hvilken testing du har utført på din webside.
+            </li>
+            <li>
+                List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
+            </li>
+            <li>
+                Husk å oppgi kilder hvis du gjenbruker kodesnutter.
+            </li>
+        </ul>
+
+        <div id="source">
+            <h3>
+                Sources
+            </h3>
+            <ul>
+                <li>
+                    <div>
+                        <a href="https://www.w3schools.com/html/html5_canvas.asp">
+                            W3 School Canvas
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <a href="http://howtocenterincss.com/">
+                            How To Center In CSS
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="https://www.kirupa.com/html5/creating_simple_html5_canvas_animation.htm">
+                            Animation in Canvas
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="https://www.shareicon.net/flag-silhouette-banners-pole-flag-pole-waving-maps-and-flags-651306">
+                            Black flag PNG
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+<script src="canvas.js"></script>
+</body>
+</html>

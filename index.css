@@ -1,0 +1,33 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    font-family: 'Lato', sans-serif;
+    background: #cdcccb;
+    width: 100%;
+}
+
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#header-projects {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr)
+}
+
+#header-title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+div {
+    border: 1px solid black;
+}

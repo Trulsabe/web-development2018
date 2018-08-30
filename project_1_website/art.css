@@ -1,0 +1,58 @@
+/* Styling for the website. */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    font-family: 'Lato', sans-serif;
+    background: #cdcccb;
+    width: 100%;
+}
+
+div {
+    align-items:center;
+    justify-items: center;
+}
+
+#preInformation {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 33% 33% 33%;
+    background: #d3d2d1;
+}
+
+
+#art-section {
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+}
+
+#art {
+    vertical-align: middle;
+}
+
+#doc-title-button {
+    display: grid;
+    grid-template-columns: 1fr 60px 3fr
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 50%;
+    bottom: 0;
+    background: #c1bfbe;
+    padding-left: 5%;
+}
+
+a.test {
+    font-weight: bold;
+}
