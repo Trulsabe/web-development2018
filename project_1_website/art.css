@@ -22,7 +22,7 @@ div {
 #preInformation {
     display: grid;
     text-align: center;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
     background: #d3d2d1;
 }
 
@@ -30,6 +30,7 @@ div {
 #art-section {
     display: grid;
     grid-template-columns: 1fr 50% 1fr;
+    margin: 3%;
 }
 
 #art {

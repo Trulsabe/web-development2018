@@ -252,6 +252,13 @@ let distance_space_ship = 0;
 let space_ship_width = 100;
 let space_ship_height = 50;
 
+
+// This is part of the animation for moving the space ship from A to B.
+// Uses the popular way of doing animations in canvas:
+//  * clears the whole canvas,
+//  * moves the object a tiny bit, and
+//  * places everything back to their normal state.
+// This uses the function requestAnimationFrame to make the movement look smooth.
 function move_spaceship() {
     if (distance_space_ship < 480 ) {
         clear_canvas();
@@ -270,10 +277,17 @@ function move_spaceship() {
 
         window.requestAnimationFrame(move_spaceship);
     }else {
-        create_flag();
+        draw_box_on_planet();
+        $("#art")
+            .on('click', start_flag)
+            .on('mousemove', point_at_box_on_planet)
+        ;
     }
 }
 
+// Draws craters already made.
+// These craters have been made earlier when the user placed the on the red circle.
+// Used for animating with requestAnimationFrame
 function draw_craters() {
     for (let i = 0; i < crater_objects.length ; i++) {
         let crater = crater_objects[i];
@@ -284,15 +298,16 @@ function draw_craters() {
         ctx.fillStyle = "rgb(128, 0, 0)";
         ctx.arc(x,  y, size, 0, Math.PI * 2, false);
         ctx.fill();
-
     }
 }
 
-
+// Clears the canvas.
 function clear_canvas() {
     ctx.clearRect(0,0, c.width, c.height);
 }
 
+// Changes the cursor based on if one is
+// pointing at the space ship while it is stationary or not.
 function point_at_space_ship(evt) {
     if (is_on_top_space_ship(evt)) {
         c.style.cursor = 'pointer';
@@ -301,7 +316,7 @@ function point_at_space_ship(evt) {
     }
 }
 
-// typical is_on..-function
+// Typical is_on..-function
 function is_on_top_space_ship (evt) {
     const min_x = 0;
     const max_x = 50;
@@ -313,11 +328,65 @@ function is_on_top_space_ship (evt) {
     return (pos.x > min_x && pos.x < max_x) && (pos.y > min_y && pos.y < max_y);
 }
 
-
 // Creating the flag, completing the work of art.
+let height_flag = 0;
 function create_flag() {
-    ctx.drawImage(black_flag, 490, 80, 25, 25);
     // completed!
+    if ( height_flag < 25) {
+        clear_canvas();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#FFAA00";
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.closePath();
+        ctx.beginPath();
+
+        ctx.drawImage(black_flag, 490, 80, 25, height_flag++);
+
+        draw_mars();
+        draw_craters();
+        window.requestAnimationFrame(create_flag);
+    } else {
+        $("#art")
+            .off('mousemove', point_at_box_on_planet)
+            .off('click', start_flag);
+    }
+}
+
+
+function is_on_top_box_on_planet (evt) {
+    let min_x = 490;
+    let max_x = min_x + 25;
+
+    let min_y = 90;
+    let max_y = min_y + 25;
+
+    let pos = get_mouse_pos(c, evt);
+    return (pos.x > min_x && pos.x < max_x) && (pos.y > min_y && pos.y < max_y);
+}
+
+function point_at_box_on_planet(evt) {
+    if (is_on_top_box_on_planet(evt)) {
+        c.style.cursor = 'pointer';
+    } else {
+        c.style.cursor = 'default';
+    }
+}
+
+function start_flag(evt) {
+    console.log("is here");
+    if (is_on_top_box_on_planet(evt)) {
+        console.log("ishere");
+        create_flag()
+    }
+}
+
+function draw_box_on_planet() {
+    ctx.beginPath();
+    ctx.rect(490, 90, 25, 25);
+    ctx.fillStyle = 'grey';
+    ctx.fill();
+    ctx.closePath();
 }
 
 /** Documentation
@@ -329,6 +398,10 @@ function create_flag() {
 let show = 0;
 
 $("#doc-content").toggle();
+
+// This mechanic, written using jQuery, shows the
+// documentation section when the user presses the button (it is set to hidden by default).
+// The text on the box also changes.
 $(document).ready(function () {
     $("#doc-button").on('click', function () {
         if (show) {
