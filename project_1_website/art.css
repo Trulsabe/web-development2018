@@ -8,51 +8,44 @@ html {
 html, body {
     margin: 0;
     padding: 0;
-    display: grid;
     font-family: 'Lato', sans-serif;
     background: #cdcccb;
     width: 100%;
 }
 
-div {
-    align-items:center;
-    justify-items: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px) auto repeat(5, 50px);
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". . . . . header . . . . ."
+    ". . . . . main . . . . ."
+    ". . . . . footer . . . . .";
+    grid-gap: 10px;
 }
 
-#preInformation {
-    display: grid;
-    text-align: center;
-    grid-template-columns: repeat(3, 1fr);
+.item-a {
+    grid-area: header;
+    justify-self: stretch;
     background: #d3d2d1;
+    text-align: center;
 }
 
-
-#art-section {
-    display: grid;
-    grid-template-columns: 1fr 50% 1fr;
-    margin: 3%;
-}
-
-#art {
+.item-b {
+    grid-area: main;
+    justify-self: center;
     vertical-align: middle;
 }
 
-#doc-title-button {
-    display: grid;
-    grid-template-columns: 1fr 60px 3fr
+.item-c {
+    grid-area: footer;
+    background: #c1bfbe;
 }
 
 button:hover{
     cursor: pointer;
 }
 
-footer {
-    display: grid;
-    grid-template-columns: 50%;
-    bottom: 0;
-    background: #c1bfbe;
-    padding-left: 5%;
-}
 
 a.test {
     font-weight: bold;

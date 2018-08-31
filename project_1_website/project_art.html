@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -11,113 +11,126 @@
 </head>
 
 <body>
-<header id="preInformation">
-    <div></div>
-    <div>
-        <h1>
-            Concrete Abstraction
-        </h1>
-        <p>
-            The artist is currently living in Trondheim, Norway,<br>
-            but plans not to stay on Earth for too long.<br>
-            This artwork is her attempt to get a free ticket to the red planet.
-        </p>
-        <p>
-            Lauren Ibsen.
-        </p>
-    </div>
-    <div></div>
-</header>
+<div class="container">
 
-<div id="art-section">
-    <div></div>
-    <div>
+    <header id="preInformation" class="item-a">
+        <div>
+            <h1>
+                Concrete Abstraction
+            </h1>
+            <p>
+                The artist is currently living in Trondheim, Norway,<br>
+                but plans not to stay on Earth for too long.<br>
+                This artwork is her attempt to get a free ticket to the red planet.
+            </p>
+            <p>
+                Lauren Ibsen.
+            </p>
+        </div>
+    </header>
+
+    <main id="art-section" class="item-b">
         <canvas id="art"
                 width="700"
                 height="400">
             Your browser does not support the HTML5 canvas tag.
         </canvas>
-    </div>
-    <div></div>
-</div>
+    </main>
 
 
-<footer id="documentation">
-    <div id="doc-title-button">
-        <h2>Dokumentasjon</h2>
-        <button id="doc-button">Show</button>
-    </div>
-    <div id="doc-content">
-        <ul>
-            <li>
-                Gi en kort beskrivelser av CSS-grid og Flexbox-layout: hvilken utfordring er disse ment og løse, hva skiller disse to løsningene og forklar ditt valg.
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        Både Grid og Flexbox er ment for å organisere nettsiders layout. Begge gjør det enkelt å plassere elementer (f.eks. paragrafer, bilder, video osv.) i forhold til hverandre.
-                        Forskjellen på de to er at Flexbox er ment for én dimensjon, mens Grid er ment for to dimemsjoner. Hvis man kun skal tenke på elementer horisontalt, så er det 'bedre' å bruke Flexbox. Hvis man derimot har tenkt å ha et slags rutenett-design, gjør Grid det
-                        veldig enkelt å håndtere.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Gi en kort beskrivelse av HTML canvas og bruk av SVG i HTML. Gjør rede for hvilken av disse som er best egnet til å løse utfordringen med å lage ditt bilde bestående av interaktive 2D-elementer som beskrevet i denne oppgaven.
-            </li>
-            <li>
-                Gi en kort beskrivelse av jQuery: hvilken funksjonalitet dette biblioteket tilbyr, og diskuter hva som er relevant for denne oppgaven.
-            </li>
-            <li>
-
-                Gi en kort beskrivelse av cross-browser testing, hvorfor dette må/bør gjøres, spesifiser hvilken testing du har utført på din webside.
-            </li>
-            <li>
-                List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
-            </li>
-            <li>
-                Husk å oppgi kilder hvis du gjenbruker kodesnutter.
-            </li>
-        </ul>
-
-        <div id="source">
-            <h3>
-                Kilder
-            </h3>
+    <footer id="documentation" class="item-c" lang="no">
+        <div id="doc-title-button">
+            <h2>Dokumentasjon</h2>
+            <button id="doc-button">Show</button>
+        </div>
+        <div id="doc-content">
             <ul>
                 <li>
-                    <div>
-                        <a href="https://www.w3schools.com/html/html5_canvas.asp">
-                            W3 School Canvas
-                        </a>
-                    </div>
+                    Gi en kort beskrivelse av CSS-grid og Flexbox-layout: hvilken utfordring er disse ment og løse, hva skiller disse to løsningene og forklar ditt valg.
+                    <ul>
+                        <li>
+                            Både Grid og Flexbox er ment for å organisere nettsiders layout. Begge gjør det enkelt å plassere elementer (f.eks. paragrafer, bilder, video osv.) i forhold til hverandre.
+                            Forskjellen på de to er at Flexbox er ment for én dimensjon, mens Grid er ment for to dimemsjoner. Hvis man kun skal tenke på elementer f.eks. horisontalt, så er det bedre å bruke Flexbox. Hvis man derimot har tenkt å ha et slags rutenett-design, gjør Grid det
+                            veldig enkelt å håndtere. <br><br>
+                            Denne nettsiden er veldig simpel. Den består av en enkel header, som ikke har knapper eller annen funksjonalitet, et innhold i midten og en footer.
+                            Dermed vil jeg argumentere for at det er begrensa hva man får gjort med enten Flexbox eller Grid. Grunnen til at jeg gikk for Grid nå
+                            var fordi det virka som at man kom til å få mest bruk for Grid i fremtiden, siden Grid virker som en oppgradering av Flexbox. Om en nettside er så simpel som denne, er det
+                            nok bedre å bruke Flexbox.
+                        </li>
+                    </ul>
                 </li>
+                <li>
+                    Gi en kort beskrivelse av HTML5 Canvas og bruk av SVG i HTML. Gjør rede for hvilken av disse som er best egnet til å løse utfordringen med å lage ditt bilde bestående av interaktive 2D-elementer som beskrevet i denne oppgaven.
+                    <ul>
+                        <li>
+                            SVG er et XML-basert bildeformat, kom i 1999 og har blitt videreutviklet siden.
+                            HTML5 Canvas er relativt nytt og er et element som brukes til å tegne grafikk på via JS.
+                            SVG har nok bedre støtte for interaktivitet, men jeg gikk for Canvas.
 
-                <li>
-                    <div>
-                        <a href="http://howtocenterincss.com/">
-                            How To Center In CSS
-                        </a>
-                    </div>
+                            <br><br> Etter å ha jobbet en del med å få interaktivitet inn i
+                            bildet, hadde det nok vært lettere å bruke SVG. Det er lettere å lage og kontrollere objekter (f.eks. sirkler, firkanter osv.) i
+                            SVG enn i Canvas. Hadde jeg starta prosjektet på nytt hadde jeg nok gått for SVG, av praktiske grunner.
+                            <br><br>I følge en diskusjon på Stack Overflow skrev en bruker at SVG var enklest å bruke, men at Canvas hadde best ytelse.
+                            Canvas virker veldig 'barebones', man må gjøre alt selv og det er ingen innebygd funksjon for interaktivitet, så utsagnet gir mening.
+                            Hvor vanskelig det er kommer selvsagt anpå hvor komplisert tegningen er. Hvis tegnebrettet kun består av rette firkanter, så er det relativt enkelt
+                            å skifte musepekeren til en hånd når en holder over firkanten. Dersom figuren enten er en sirkel, envinkla firkant (f.eks. en rombe) eller noe annet blir det hakket mer komplisert.
+
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <div>
-                        <a href="https://www.kirupa.com/html5/creating_simple_html5_canvas_animation.htm">
-                            Animation in Canvas
-                        </a>
-                    </div>
+                    Gi en kort beskrivelse av jQuery: hvilken funksjonalitet dette biblioteket tilbyr, og diskuter hva som er relevant for denne oppgaven.
                 </li>
                 <li>
-                    <div>
-                        <a href="https://www.shareicon.net/flag-silhouette-banners-pole-flag-pole-waving-maps-and-flags-651306">
-                            Black flag PNG
-                        </a>
-                    </div>
+
+                    Gi en kort beskrivelse av cross-browser testing, hvorfor dette må/bør gjøres, spesifiser hvilken testing du har utført på din webside.
+                </li>
+                <li>
+                    List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
+                </li>
+                <li>
+                    Husk å oppgi kilder hvis du gjenbruker kodesnutter.
                 </li>
             </ul>
 
+            <div id="source">
+                <h3>
+                    Kilder
+                </h3>
+                <ul>
+                    <li>
+                            <a href="https://www.w3schools.com/html/html5_canvas.asp">
+                                W3 School Canvas
+                            </a>
+
+                    </li>
+
+                    <li>
+                            <a href="http://howtocenterincss.com/">
+                                How To Center In CSS
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.kirupa.com/html5/creating_simple_html5_canvas_animation.htm">
+                                Animation in Canvas
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.shareicon.net/flag-silhouette-banners-pole-flag-pole-waving-maps-and-flags-651306">
+                                Black flag PNG
+                            </a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/questions/5882716/html5-canvas-vs-svg-vs-div">
+                                Canvas vs SVG (vs div)
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
 <script src="canvas.js"></script>
 </body>
 </html>

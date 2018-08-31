@@ -1,29 +1,43 @@
 html {
-    position: relative;
     min-height: 100%;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    display: grid;
     font-family: 'Lato', sans-serif;
     background: #cdcccb;
     width: 100%;
 }
 
-
-header {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+.item-a {
+    grid-area: header;
+    justify-self: center;
+    border-bottom: 1px solid black
 }
 
-#header-projects {
-    display:grid;
-    grid-template-columns: repeat(6, 1fr)
+.item-b {
+    grid-area: main;
 }
 
-#header-title {
+.item-c {
+    grid-area: footer;
+    border: 1px solid green;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 250px 50px auto 50px 250px;
+    grid-template-rows: 25% auto auto;
+    grid-template-areas:
+            "header header header header header"
+            ". . main . . "
+            "footer footer footer footer footer";
+}
+
+div {
+    border: 1px solid black;
 }
