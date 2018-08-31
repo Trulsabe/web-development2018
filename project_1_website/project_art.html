@@ -49,13 +49,14 @@
                     Gi en kort beskrivelse av CSS-grid og Flexbox-layout: hvilken utfordring er disse ment og løse, hva skiller disse to løsningene og forklar ditt valg.
                     <ul>
                         <li>
-                            Både Grid og Flexbox er ment for å organisere nettsiders layout. Begge gjør det enkelt å plassere elementer (f.eks. paragrafer, bilder, video osv.) i forhold til hverandre.
+                            <p>Både Grid og Flexbox er ment for å organisere nettsiders layout. Begge gjør det enkelt å plassere elementer (f.eks. paragrafer, bilder, video osv.) i forhold til hverandre.
                             Forskjellen på de to er at Flexbox er ment for én dimensjon, mens Grid er ment for to dimemsjoner. Hvis man kun skal tenke på elementer f.eks. horisontalt, så er det bedre å bruke Flexbox. Hvis man derimot har tenkt å ha et slags rutenett-design, gjør Grid det
-                            veldig enkelt å håndtere. <br><br>
-                            Denne nettsiden er veldig simpel. Den består av en enkel header, som ikke har knapper eller annen funksjonalitet, et innhold i midten og en footer.
+                            veldig enkelt å håndtere.</p>
+
+                            <p>Denne nettsiden er veldig simpel. Den består av en enkel header, som ikke har knapper eller annen funksjonalitet, et innhold i midten og en footer.
                             Dermed vil jeg argumentere for at det er begrensa hva man får gjort med enten Flexbox eller Grid. Grunnen til at jeg gikk for Grid nå
                             var fordi det virka som at man kom til å få mest bruk for Grid i fremtiden, siden Grid virker som en oppgradering av Flexbox. Om en nettside er så simpel som denne, er det
-                            nok bedre å bruke Flexbox.
+                            nok bedre å bruke Flexbox.</p>
                         </li>
                     </ul>
                 </li>
@@ -63,27 +64,74 @@
                     Gi en kort beskrivelse av HTML5 Canvas og bruk av SVG i HTML. Gjør rede for hvilken av disse som er best egnet til å løse utfordringen med å lage ditt bilde bestående av interaktive 2D-elementer som beskrevet i denne oppgaven.
                     <ul>
                         <li>
-                            SVG er et XML-basert bildeformat, kom i 1999 og har blitt videreutviklet siden.
-                            HTML5 Canvas er relativt nytt og er et element som brukes til å tegne grafikk på via JS.
-                            SVG har nok bedre støtte for interaktivitet, men jeg gikk for Canvas.
+                                <p>
+                                    SVG er et XML-basert bildeformat, kom i 1999 og har blitt videreutviklet siden.
+                                    HTML5 Canvas er relativt nytt og er et element som brukes til å tegne grafikk på via JS.
+                                    SVG har nok bedre støtte for interaktivitet, men jeg gikk for Canvas.
+                                </p>
 
-                            <br><br> Etter å ha jobbet en del med å få interaktivitet inn i
-                            bildet, hadde det nok vært lettere å bruke SVG. Det er lettere å lage og kontrollere objekter (f.eks. sirkler, firkanter osv.) i
-                            SVG enn i Canvas. Hadde jeg starta prosjektet på nytt hadde jeg nok gått for SVG, av praktiske grunner.
-                            <br><br>I følge en diskusjon på Stack Overflow skrev en bruker at SVG var enklest å bruke, men at Canvas hadde best ytelse.
-                            Canvas virker veldig 'barebones', man må gjøre alt selv og det er ingen innebygd funksjon for interaktivitet, så utsagnet gir mening.
-                            Hvor vanskelig det er kommer selvsagt anpå hvor komplisert tegningen er. Hvis tegnebrettet kun består av rette firkanter, så er det relativt enkelt
-                            å skifte musepekeren til en hånd når en holder over firkanten. Dersom figuren enten er en sirkel, envinkla firkant (f.eks. en rombe) eller noe annet blir det hakket mer komplisert.
+                                <p>
+                                    Etter å ha jobbet en del med å få interaktivitet inn i
+                                    bildet, hadde det nok vært lettere å bruke SVG. Det er lettere å lage og kontrollere objekter (f.eks. sirkler, firkanter osv.) i
+                                    SVG enn i Canvas. Hadde jeg starta prosjektet på nytt hadde jeg nok gått for SVG, av praktiske grunner.
+                                </p>
+                                <p>
+                                    I følge en diskusjon på Stack Overflow skrev en bruker at SVG var enklest å bruke, men at Canvas hadde best ytelse.
+                                    Canvas er veldig 'barebones', man må gjøre alt selv og det er ingen innebygd funksjon for automatisk interaktivitet, så utsagnet gir mening.
+                                    Hvor vanskelig det er kommer selvsagt anpå hvor komplisert tegningen er. Hvis tegnebrettet kun består av rette firkanter, så er det relativt enkelt
+                                    å skifte musepekeren til en hånd når en holder over firkanten. Dersom figuren enten er en sirkel, envinkla firkant (f.eks. en rombe) eller noe annet blir det hakket mer komplisert.
+                                </p>
 
+                                <p>
+                                    Når man tegner figurer i Canvas, sammenlignes det med at man tegner på et ark. Når man skal flytte på et
+                                    element må man fjerne alt som innenfor ramma, tegne endringen for så å legge til alt igjen.
+                                    Dette må gjøres manuelt og gjør det kronglete å lage animasjoner. Man må selv skrive ned posisjonene til alle figurene på bildet før en endring skjer. Dette må en ikke tenke på med SVG.
+                                </p>
                         </li>
                     </ul>
                 </li>
                 <li>
                     Gi en kort beskrivelse av jQuery: hvilken funksjonalitet dette biblioteket tilbyr, og diskuter hva som er relevant for denne oppgaven.
+                    <ul>
+                        <li>
+
+                            <p>
+                                Oppsummert er jQuery er bibliotek som er ment å gjøre det lettere å lage funksjonalitet på nettsiden, istedet for å skrive 'raw' JavaScript-kode.
+                                Mange forskjellige, populære funksjoner blir kortet ned til kun få linjer med kode. Dette kan være egenskaper som det å gjemme et element på en nettside når
+                                trykker på en knapp. <br><i>Eksempel på pseudokode:</i> <br>$("detElementet").toggle() inni en $("knapp").on('click', ...).<br>
+                                Og så er jobben gjort.
+                            </p>
+                            <p>
+                                Jeg har ingen tidligere erfaring med jQuery. I starten fant jeg kun nytte av jQuery til å vise eller skjule dokumentasjonsdelen
+                                av oppgaven. Etterhvert fant jeg ut om jQuerys .on()-funksjon. Den hjalp mye når det kom til interaktivitet med Canvas-elementer.
+                                Gitt at nettsiden er så enkel så er det få muligheter for hvor man får bruk for bibliotek som jQuery. Annet enn litt Canvas og den ene knappen er det begrensa
+                                for hva som er relevant for prosjekt 1.
+                            </p>
+
+                        </li>
+                    </ul>
                 </li>
                 <li>
 
                     Gi en kort beskrivelse av cross-browser testing, hvorfor dette må/bør gjøres, spesifiser hvilken testing du har utført på din webside.
+                    <ul>
+                        <li>
+                            <p>
+                                I dag finnes det flere nettlesere. På overflaten er de like, men det finnes forskjeller som hvor mye støtte en har for programmeringsspråk som passer.
+                                Firefox 61 har kanskje fått støtte for en ny, stor oppdatering til et bibliotek, som Chrome 68 enda ikke har fått. Dette kan føre til problemer for de som går på nettsiden mens de bruker Chrome.
+                            </p>
+                            <p>
+                                De nyeste tallene fra statcounter.com viser at
+                                rundt 50-60(59.69% i juli) % av brukere på nett bruker Chrome, med Safari på andre plass. Grunnen til at det er viktig med cross-browser er nettopp fordi
+                                folk bruker forskjellige nettlesere som igjen har forskjellige egenskaper og støtte.
+                            </p>
+
+                            <p>
+                                På min nettside har jeg testet nettsiden på Firefox og Edge og oppførselsen har vært lik på begge. Jeg testet om måten man håndterer seg rundt på Canvas-elementet
+                                er det samme på begge, og om knappen for å vise eller skjule dokumentasjonen har fungert. Stylingen er ganske basic, og har derfor fungert fint på begge nettlesere.
+                            </p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
@@ -123,6 +171,16 @@
                     <li>
                         <a href="https://stackoverflow.com/questions/5882716/html5-canvas-vs-svg-vs-div">
                                 Canvas vs SVG (vs div)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://gs.statcounter.com/">
+                            StatCounter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/">
+                            Stack Overflow
                         </a>
                     </li>
                 </ul>
